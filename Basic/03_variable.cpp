@@ -8,16 +8,16 @@ int main() {
 
 	int x = 10;		// copy
 	int y(10);		// direct
-	int z{ 10 };	// uniform : Çüº¯È¯À» Çã¿ëÇÏÁö ¾Ê´Â´Ù. -> ¾ÈÀüÇÏ´Ù.
+	int z{ 10 };	// uniform : í˜•ë³€í™˜ì„ í—ˆìš©í•˜ì§€ ì•ŠëŠ”ë‹¤. -> ì•ˆì „í•˜ë‹¤.
 
-	int a = 1.1;		// warning : µ¥ÀÌÅÍ ¼Õ½Ç
-	// int b{ 1.1 };	// error : °ªÀÌ Àß¸²
+	int a = 1.1;		// warning : ë°ì´í„° ì†ì‹¤
+	// int b{ 1.1 };	// error : ê°’ì´ ì˜ë¦¼
 	char c = 500;		// warning
 	// char d{ 500 };	// error 
 
 	int e = 0, f(1), g{ 2 };
 
-	// limits : °¢°¢ÀÇ ÀÚ·áÇüÀÇ ÇÑ°è°ªÀ» °¡Áö°í ÀÖ´Â Å¬·¡½º
+	// limits : ê°ê°ì˜ ìë£Œí˜•ì˜ í•œê³„ê°’ì„ ê°€ì§€ê³  ìˆëŠ” í´ë˜ìŠ¤
 	// <> : temlpate
 	std::cout << std::numeric_limits<short>::max() << std::endl;
 	std::cout << std::numeric_limits<int>::min() << std::endl;
@@ -28,14 +28,14 @@ int main() {
 	// casting
 	float k = 10.123f;
 	std::cout << k << std::endl;
-	std::cout << (int)k << std::endl; // c ctyle ³Ê¹« °­·ÂÇÔ -> °ü°è¾ø´Â ÀÚ·áÇü³¢¸®ÀÇ Çüº¯È¯µµ °¡´É
+	std::cout << (int)k << std::endl; // c ctyle ë„ˆë¬´ ê°•ë ¥í•¨ -> ê´€ê³„ì—†ëŠ” ìë£Œí˜•ë¼ë¦¬ì˜ í˜•ë³€í™˜ë„ ê°€ëŠ¥
 	std::cout << int(k) << std::endl; // c++ style
 
 	std::cout << static_cast<int>(k) << std::endl; // c++ style
-
+	
 	// const vs constexpr 
 
-	// const : ¹Ş´Â °ª¿¡ µû¶ó ÄÄÆÄÀÏÀÌ³ª ·±Å¸ÀÓ ¶§ °ªÀÌ °áÁ¤µÈ´Ù.
+	// const : ë°›ëŠ” ê°’ì— ë”°ë¼ ì»´íŒŒì¼ì´ë‚˜ ëŸ°íƒ€ì„ ë•Œ ê°’ì´ ê²°ì •ëœë‹¤.
 
 	const int c1 = 123;
 
@@ -43,18 +43,17 @@ int main() {
 	const int c2 = i1;
 
 	int arr_1[c1];
-	// int arr_2[c2]; // error : ÃÊ±âÈ­ °ªÀ» º¯¼ö·Î ¹Ş¾Æ ·±Å¸ÀÓ¶§ °ªÀÌ Á¤ÇØÁø´Ù.
+	// int arr_2[c2]; // error : ì´ˆê¸°í™” ê°’ì„ ë³€ìˆ˜ë¡œ ë°›ì•„ ëŸ°íƒ€ì„ë•Œ ê°’ì´ ì •í•´ì§„ë‹¤.
 
 	/* 
-		constexpr : ÄÄÆÄÀÏÅ¸ÀÓ¶§ °ªÀÌ Á¤ÇØÁø´Ù.
-		 ->ÄÄÆÄÀÏ¶§ ¾Ë ¼ö ¾ø´Â °ªÀº ¹ŞÀ» ¼ö ¾ø´Ù.
-		 - ¸ÅÅ©·Î¿Í À¯»çÇÏÁö¸¸ µğ¹ö±ëÀÌ °¡´ÉÇÏ´Ù.
+		constexpr : ì»´íŒŒì¼íƒ€ì„ë•Œ ê°’ì´ ì •í•´ì§„ë‹¤.
+		 ->ì»´íŒŒì¼ë•Œ ì•Œ ìˆ˜ ì—†ëŠ” ê°’ì€ ë°›ì„ ìˆ˜ ì—†ë‹¤.
+		 - ë§¤í¬ë¡œì™€ ìœ ì‚¬í•˜ì§€ë§Œ ë””ë²„ê¹…ì´ ê°€ëŠ¥í•˜ë‹¤.
 	 */
 
 	constexpr float pi1 = 3.1415921f;
 	float pi2 = 3.141592f;
-	// constexpr float pi3 = pi2; // error : º¯¼ö´Â ÄÄÆÄÀÏ ½ÃÁ¡¿¡ ¾Ë ¼ö ¾ø¾î ¾ÈµÈ´Ù.
+	// constexpr float pi3 = pi2; // error : ë³€ìˆ˜ëŠ” ì»´íŒŒì¼ ì‹œì ì— ì•Œ ìˆ˜ ì—†ì–´ ì•ˆëœë‹¤.
 
 	return 0;
 }
-
