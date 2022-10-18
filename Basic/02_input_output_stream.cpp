@@ -3,7 +3,7 @@
 #include<iostream>
 #include<iomanip>
 
-//stream( >> , << ) : µ¥ÀÌÅÍ ÀÔÃâ·ÂÀÇ Èå¸§À» Ç¥½ÃÇÑ °Í
+//stream( >> , << ) : ë°ì´í„° ìž…ì¶œë ¥ì˜ íë¦„ì„ í‘œì‹œí•œ ê²ƒ
 
 int main() {
 	// cout
@@ -20,18 +20,18 @@ int main() {
 	std::cin >> z;
 	std::cout << "Your input is " << z << std::endl << std::endl;
 
-	// Á¶Á¤ÀÚ(manipulator) : Ãâ·ÂÇü½ÄÀ» ÁöÁ¤ÇØÁØ´Ù, ¹Ù²ÙÁö ¾Ê´Â ÇÑ °è¼Ó À¯ÁöµÈ´Ù.
+	// ì¡°ì •ìž(manipulator) : ì¶œë ¥í˜•ì‹ì„ ì§€ì •í•´ì¤€ë‹¤, ë°”ê¾¸ì§€ ì•ŠëŠ” í•œ ê³„ì† ìœ ì§€ëœë‹¤.
 	
 	int num = 100;
 	
-	// Áø¼ö Ãâ·Â Çü½Ä Á¶Á¤ÀÚ
+	// ì§„ìˆ˜ ì¶œë ¥ í˜•ì‹ ì¡°ì •ìž
 	std::cout << std::oct << num << std::endl;
 	std::cout << std::dec << num << std::endl;
 	std::cout << std::hex << num << std::endl << std::endl;
 
-	// showbase : ¾î¶² Áø¼ö ÇüÅÂ·Î Ãâ·ÂµÇ´ÂÁö Ç¥½Ã
-	// showpos : ½ÉÁø¼ö Á¤¼öÀÇ ºÎÈ£Ç¥½Ã
-	// noshowbase, noshowpos·Î ÇØÁ¦ °¡´É
+	// showbase : ì–´ë–¤ ì§„ìˆ˜ í˜•íƒœë¡œ ì¶œë ¥ë˜ëŠ”ì§€ í‘œì‹œ
+	// showpos : ì‹¬ì§„ìˆ˜ ì •ìˆ˜ì˜ ë¶€í˜¸í‘œì‹œ
+	// noshowbase, noshowposë¡œ í•´ì œ ê°€ëŠ¥ 
 	std::cout << std::showbase << std::showpos;
 	std::cout << std::oct << num << std::endl;
 	std::cout << std::dec << num << std::endl;
@@ -41,7 +41,7 @@ int main() {
 	bool is_true = true;
 	bool is_false = false;
 
-	// boolÇü½ÄÀÇ Ãâ·Â¹æ½Ä ¹Ù²Ù±â
+	// boolí˜•ì‹ì˜ ì¶œë ¥ë°©ì‹ ë°”ê¾¸ê¸°
 	std::cout << std::boolalpha;
 	std::cout << is_true << std::endl;
 	std::cout << is_false << std::endl;
