@@ -45,7 +45,7 @@ int main() {
 		uniform_int_distribution<> dice(1, 6);
 	
 		for (int i = 0; i < 10; i++)
-			cout << dice(merssenne) << ",";
+			cout << dice(merssenne) << ", ";
 	}
 	return 0;
 }
