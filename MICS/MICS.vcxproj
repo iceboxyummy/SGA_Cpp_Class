@@ -19,10 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Math.h" />
     <ClInclude Include="섯다.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="test1.cpp" />
+    <ClCompile Include="test2.cpp" />
     <ClCompile Include="섯다.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
