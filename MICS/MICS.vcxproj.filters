@@ -10,5 +10,6 @@
     <ClCompile Include="test1.cpp" />
     <ClCompile Include="test2.cpp" />
     <ClCompile Include="Math.cpp" />
+    <ClCompile Include="const.cpp" />
   </ItemGroup>
 </Project>

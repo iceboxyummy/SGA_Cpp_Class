@@ -23,6 +23,7 @@
     <ClInclude Include="섯다.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="const.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="test1.cpp" />
