@@ -23,6 +23,7 @@ public:
 		out << "(" << p.x << "," << p.y << ")" << endl;
 		return out;
 	}
+
 	// istream : 입력 스트림
 	friend istream& operator>>(istream& in, Point& p)
 	{

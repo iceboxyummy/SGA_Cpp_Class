@@ -1,9 +1,6 @@
  // 01_arithmatic_operator.cpp
 
-/*
-   arithmatic operator - 산술 연산자
-   (+), (-), (*), (/), (%), (+=), (-=), (*=), (/=), (%=)
-*/
+// arithmatic operator ( 산술 연산자 ) : (+), (-), (*), (/), (%), (+=), (-=), (*=), (/=), (%=)
 
 #include<iostream>
 using namespace std;
@@ -42,7 +39,7 @@ int operator+(const Won& lhs, Won& rhs)
 	return lhs.value() + rhs.value();
 }
 
-int operator-(const Won& lhs, Won& rhs)
+Won operator-(const Won& lhs, Won& rhs)
 {
 	// 리턴값에 맞은 적절한 생성자강 있을시 가능하다.
 	return lhs.GetValue() - rhs.GetValue();
@@ -56,6 +53,8 @@ int main() {
 
 	Won result2(l - r);
 	cout << result2.GetValue() << endl;
+
+	return 0;
 }
 
 #endif 
@@ -75,6 +74,7 @@ public:
 	{
 		return value;
 	}
+
 	// l + r -> l.operator(r)
 	int operator+(const Won& rhs) const
 	{
