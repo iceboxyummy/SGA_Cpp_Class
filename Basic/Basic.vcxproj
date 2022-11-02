@@ -19,8 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="06_type_inference.cpp" />
-    <ClCompile Include="07_type_information.cpp" />
     <ClCompile Include="22_variable_argument.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

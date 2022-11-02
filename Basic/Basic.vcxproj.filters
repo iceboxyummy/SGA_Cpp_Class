@@ -2,7 +2,5 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="22_variable_argument.cpp" />
-    <ClCompile Include="06_type_inference.cpp" />
-    <ClCompile Include="07_type_information.cpp" />
   </ItemGroup>
 </Project>

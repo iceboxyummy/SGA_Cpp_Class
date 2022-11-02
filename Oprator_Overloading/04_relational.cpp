@@ -86,5 +86,16 @@ int main() {
 		cout << won << " ";
 	cout << endl;
 
+	// 람다식 사용
+	sort(wons.begin(), wons.begin(), [](const Won& lhs, const Won& rhs)
+		{
+			return lhs.GetValue() > rhs.GetValue();
+		}
+	);
+
+	for (const auto& won : wons)
+			cout << won << " ";
+		cout << endl;
+
 	return 0;
 }
