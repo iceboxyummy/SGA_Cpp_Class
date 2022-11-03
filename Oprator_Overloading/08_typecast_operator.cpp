@@ -31,7 +31,7 @@ public:
 
 	operator float*()
 	{
-		// µ¥ÀÌÅÍ°¡ ¿¬¼ÓÀûÀ¸·Î µÇ¾îÀÖ¾î x¸¦ ³Ñ±â¸é x, y, z¸¦ Æ÷ÀÎÅÍ ¿¬»êÀ¸·Î ¼ø¼­´ë·Î Á¢±Ù°¡´É
+		// ë°ì´í„°ê°€ ì—°ì†ì ìœ¼ë¡œ ë˜ì–´ìžˆì–´ xë¥¼ ë„˜ê¸°ë©´ x, y, zë¥¼ í¬ì¸í„° ì—°ì‚°ìœ¼ë¡œ ìˆœì„œëŒ€ë¡œ ì ‘ê·¼ê°€ëŠ¥
 		return &x;
 	}
 
@@ -41,7 +41,7 @@ private:
 	float z = 0.0f;
 };
 
-// ³»ºÎÀûÀ¸·Î ¹è¿­À» ¸Å°³º¯¼ö·Î ¹ÞÀ»¶§´Â Æ÷ÀÎÅÍ ÇüÅÂ·Î ¹Þ´Â´Ù.
+// ë‚´ë¶€ì ìœ¼ë¡œ ë°°ì—´ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì„ë•ŒëŠ” í¬ì¸í„° í˜•íƒœë¡œ ë°›ëŠ”ë‹¤.
 void PrintPoint(float points[3]) // float* points
 	{
 	cout << points[0] << endl;
@@ -53,11 +53,11 @@ int main() {
 
 	Won w(10);
 	
-	// int Çüº¯È¯À» ¿À¹ö·ÎµùÇÏ¿© ¾Ï½ÃÀûÀ¸·Î Ä³½ºÆÃµÇµµ·Ï ÇÔ
+	// int í˜•ë³€í™˜ì„ ì˜¤ë²„ë¡œë”©í•˜ì—¬ ì•”ì‹œì ìœ¼ë¡œ ìºìŠ¤íŒ…ë˜ë„ë¡ í•¨
 	Print(w);
 
 	Point p(1.0f, 2.0f, 3.0f);
 
 	PrintPoint(p);
-	return 0;
+	return 0; 
 }
