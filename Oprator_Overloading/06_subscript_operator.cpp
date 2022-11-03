@@ -1,7 +1,7 @@
   // 06_subscript_operator.cpp -> []
 
 #include<iostream>
-#include<cassert>
+#include<cassert> 
 #include<vector>
 using namespace std;
 
@@ -15,15 +15,15 @@ public:
 	// 2.
 	int* GetList() { return list; }
 
-	// 3. 2º¸´Ü ¾ÈÀüÇÏÁö¸¸ ´À¸®´Ù.
+	// 3. 2ë³´ë‹¨ ì•ˆì „í•˜ì§€ë§Œ ëŠë¦¬ë‹¤.
 	int& operator[](int index)
 	{
 		//if (index >= 10 || index < 0)
 		//{
-		//	// ¿¹¿ÜÃ³¸®
+		//	// ì˜ˆì™¸ì²˜ë¦¬
 		//}
 
-		// 4. µğ¹ö±×½Ã¿¡¸¸ Ã¼Å©, ¸±¸®Áî¿¡¼­´Â ºü¸£´Ù.
+		// 4. ë””ë²„ê·¸ì‹œì—ë§Œ ì²´í¬, ë¦´ë¦¬ì¦ˆì—ì„œëŠ” ë¹ ë¥´ë‹¤.
 		assert(index >= 0);
 		assert(index < 10);
 
@@ -37,7 +37,7 @@ private:
 int main() {
 	IntArray list;
 
-	// 1. ¹ø°Å·Ó´Ù
+	// 1. ë²ˆê±°ë¡­ë‹¤
 	// list.Set(0, 1);
 	// list.Set(1, 2);
 	// list.Set(2, 3);
@@ -52,8 +52,8 @@ int main() {
 	// cout << list.Get(4) << endl;
 	// cout << list.Get(5) << endl;
 
-	//2. ¹è¿­À» ¸®ÅÏ¹Ş¾Æ »ç¿ë°¡´É
-	// ÇÏÁö¸¸ Å©±â¿¡ ´ëÇÑ Á¤º¸°¡ ¾ø´Ù -> ¾ÈÀüÇÏÁö ¾Ê´Ù.
+	//2. ë°°ì—´ì„ ë¦¬í„´ë°›ì•„ ì‚¬ìš©ê°€ëŠ¥
+	// í•˜ì§€ë§Œ í¬ê¸°ì— ëŒ€í•œ ì •ë³´ê°€ ì—†ë‹¤ -> ì•ˆì „í•˜ì§€ ì•Šë‹¤.
 	// auto arr = list.GetList();
 	
 	// arr[0] = 1;
@@ -68,7 +68,7 @@ int main() {
 	// cout << arr[3] << endl;
 	// cout << arr[4] << endl;
 
-	// 3. [] ¿À¹ö·Îµù
+	// 3. [] ì˜¤ë²„ë¡œë”©
 	list[0] = 1;
 	list[1] = 1;
 	list[2] = 1;
@@ -80,21 +80,21 @@ int main() {
 
 	IntArray* list3 = new IntArray;
 
-	// list3[0] = 10; Æ÷ÀÎÅÍ¿¡ ºÙ¿© error
+	// list3[0] = 10; í¬ì¸í„°ì— ë¶™ì—¬ error
 	(*list3)[0] = 10;
 
 	vector<int>vecs;
 
-	// µğ¹ö±×¿¡¸¸ Ã¼Å©
+	// ë””ë²„ê·¸ì—ë§Œ ì²´í¬
 	vecs[0];
 	vecs[1];
 	
-	// ¸±¸®Áî¿¡¼­µµ Ã¼Å©
+	// ë¦´ë¦¬ì¦ˆì—ì„œë„ ì²´í¬
 	vecs.at(0);
 	vecs.at(1);
 
-	// ¼Óµµ¸é¿¡¼­ »ç¿ë°¡´ÉÇÑ ¹æ¹ı 
-	int* arr = vecs.data(); // Æ¯Á¤ µ¥ÀÌÅÍÀÇ ½ÃÀÛÁÖ¼Ò¸¦ »©¿È 
+	// ì†ë„ë©´ì—ì„œ ì‚¬ìš©ê°€ëŠ¥í•œ ë°©ë²• 
+	int* arr = vecs.data(); // íŠ¹ì • ë°ì´í„°ì˜ ì‹œì‘ì£¼ì†Œë¥¼ ë¹¼ì˜´ 
 	arr++;
 
 	return 0;
