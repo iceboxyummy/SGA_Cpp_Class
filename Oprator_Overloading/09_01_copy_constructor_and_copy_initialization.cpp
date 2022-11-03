@@ -46,12 +46,12 @@ int main() {
 	Fraction frac; // constructor
 
 	Fraction copy1(frac); // copy constructor
-	Fraction copy2 = frac; // copy constructor -> »ý¼º½ÃÁ¡ÀÌ¹Ç·Î copy2(frac)¿Í µ¿ÀÏ, Çò°¥¸®¹Ç·Î »ç¿ëÇÏÁö ¾Ê´Â°ÍÀ» ±ÇÀåÇÑ´Ù.
+	Fraction copy2 = frac; // copy constructor -> ìƒì„±ì‹œì ì´ë¯€ë¡œ copy2(frac)ì™€ ë™ì¼, í—·ê°ˆë¦¬ë¯€ë¡œ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ”ê²ƒì„ ê¶Œìž¥í•œë‹¤.
 
 	copy1 = frac; // copy operator = 
 
 	cout << "#######################" << endl;
-	CreateFraction(); // Debug¸ðµå¿¡¼­´Â º¹»ç°¡ ¹ß»ýÇÏÁö¸¸ Release¿¡¼­´Â ¹ß»ýÇÏÁö ¾ÊÀ½ -> NRVO
+	CreateFraction(); // Debugëª¨ë“œì—ì„œëŠ” ë³µì‚¬ê°€ ë°œìƒí•˜ì§€ë§Œ Releaseì—ì„œëŠ” ë°œìƒí•˜ì§€ ì•ŠìŒ -> NRVO
 
-	return 0;
+	return 0; 
 }
