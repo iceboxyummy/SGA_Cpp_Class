@@ -63,7 +63,7 @@ public:
 	}
 
 	// copy assigment operator
-	MyString& operator=(MyString&& other)
+	MyString& operator=(const MyString&& other)
 	{
 		// 안전한 코드를 만들기 위한 주의점
 
@@ -75,19 +75,46 @@ public:
 		if(this->data!=nullptr)
 		{
 			delete[] this->data;
-			this->data=	
+			this->data = nullptr;
 		}
-		cout << "move constructor" << endl;
 
-		length = std::move(other.length);
-		data = std::move(other.data);
-	
-		other.data = nullptr;
+		cout << "copy assignment operator" << endl;
+		length = other.length;
+		if (other.data != nullptr)
+		{
+			data = new char[length];
+			for (int i = 0; i < length; i++)
+				data[i] = other.data[i];
+		}
+		else
+			data = nullptr;
+
 		return *this;
 	}
 
 	// move assigment operator
-	MyString& operator=(const MyString&& other){}
+	MyString& operator=(MyString&& other)
+	{
+		// 1
+		if (this == &other) // 자기자신을 할당하는 것 방지
+			return *this;
+
+		// 2 이미 값을 가지고 있을 경우 복사 할때 메모리 누수 가능성이 있다.
+		if (this->data != nullptr)
+		{
+			delete[] this->data;
+			this->data = nullptr;
+		}
+
+		cout << "move assignment operator" << endl;
+
+		length = std::move(other.length);
+		data = std::move(other.data);
+
+		other.data = nullptr;
+
+		return *this;
+	}
 
 	~MyString()
 	{
@@ -97,6 +124,7 @@ public:
 			data = nullptr;
 		}
 	}
+
 public:
 	char* data = nullptr;
 	int length = 0;
@@ -124,7 +152,7 @@ int main() {
 
 	{ // move
 		MyString move(std::move(str)); // move constructor
-		move = std::move(str); // move assignment operator
+		// move = std::move(str); // move assignment operator
 
 		cout << (int*)move.data << endl;
 		cout << move.data << endl;
