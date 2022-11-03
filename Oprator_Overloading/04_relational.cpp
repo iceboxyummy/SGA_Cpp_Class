@@ -1,8 +1,8 @@
  // 04_relational.cpp
 
 #include<iostream>
-#include<vector>		// µ¿Àû¹è¿­
-#include<algorithm>		// stlÀü¿ë ¾Ë°í¸®Áò
+#include<vector>		// ë™ì ë°°ì—´
+#include<algorithm>		// stlì „ìš© ì•Œê³ ë¦¬ì¦˜
 
 using namespace std;
 
@@ -56,7 +56,7 @@ int main() {
 
 	//Won* wons1 = new Won[20];
 
-	vector<Won> wons(20); // ±æÀÌ°¡ 20ÀÎ won µ¿Àû¹è¿­ »ı¼º
+	vector<Won> wons(20); // ê¸¸ì´ê°€ 20ì¸ won ë™ì ë°°ì—´ ìƒì„±
 
 	int i = 0;
 	for (auto& won : wons)
@@ -65,28 +65,28 @@ int main() {
 		i++;
 	}
 
-	// ¾Ë°í¸®Áò¿¡ ÀÖ´Â ¹«ÀÛÀ§ ¼ÅÇÃ ÇÔ¼ö
+	// ì•Œê³ ë¦¬ì¦˜ì— ìˆëŠ” ë¬´ì‘ìœ„ ì…”í”Œ í•¨ìˆ˜
 	random_shuffle(wons.begin(), wons.end());
 
 	for (const auto& won : wons)
 		cout << won << " ";
 	cout << endl;
 
-	// ±âº»ÀûÀ¸·Î ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä ->  < ¿¬»êÀÚ°¡ Á¤ÀÇµÇ¾î ÀÖ¾î¾ß ÇÑ´Ù.
+	// ê¸°ë³¸ì ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ ->  < ì—°ì‚°ìê°€ ì •ì˜ë˜ì–´ ìˆì–´ì•¼ í•œë‹¤.
 	std::sort(wons.begin(), wons.end());
 
 	for (const auto& won : wons)
 		cout << won << " ";
 	cout << endl;
 
-	// »ç¿ëÀÚ°¡ Á¤ÀÇÇÑ ÇÔ¼ö¸¦ ³Ö¾î Á¤·Ä
+	// ì‚¬ìš©ìê°€ ì •ì˜í•œ í•¨ìˆ˜ë¥¼ ë„£ì–´ ì •ë ¬
 	std::sort(wons.begin(), wons.end(), test);
 
 	for (const auto& won : wons)
 		cout << won << " ";
 	cout << endl;
 
-	// ¶÷´Ù½Ä »ç¿ë
+	// ëŒë‹¤ì‹ ì‚¬ìš©
 	sort(wons.begin(), wons.begin(), [](const Won& lhs, const Won& rhs)
 		{
 			return lhs.GetValue() > rhs.GetValue();
@@ -96,6 +96,6 @@ int main() {
 	for (const auto& won : wons)
 			cout << won << " ";
 		cout << endl;
-
+ 
 	return 0;
 }
