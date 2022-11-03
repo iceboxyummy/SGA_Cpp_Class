@@ -16,7 +16,7 @@ int main() {
 	Counter ct;
 
 	cout << ct(10) << endl; // Function Object - Functor
-	cout << ct(20) << endl; // °´Ã¼¸¦ ÇÔ¼öÃ³·³ »ç¿ë
+	cout << ct(20) << endl; // Â°Â´ÃƒÂ¼Â¸Â¦ Ã‡Ã”Â¼Ã¶ÃƒÂ³Â·Â³ Â»Ã§Â¿Ã«
 
 	return 0;
-}
+} 
