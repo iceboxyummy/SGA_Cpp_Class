@@ -18,11 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="02_person.h" />
+    <ClInclude Include="02_student.h" />
+    <ClInclude Include="02_teacher.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="03_inheritance_and_access_specifier.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0138eb89-fd28-4a44-9619-3b2e30f3e0a0}</ProjectGuid>
-    <RootNamespace>ObjectRelationship</RootNamespace>
+    <ProjectGuid>{a84910f0-c490-45a3-ac6d-ff28838699e6}</ProjectGuid>
+    <RootNamespace>Inheritance</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
