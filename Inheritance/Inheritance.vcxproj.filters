@@ -6,6 +6,6 @@
     <ClInclude Include="02_teacher.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="03_inheritance_and_access_specifier.cpp" />
+    <ClCompile Include="08_overriding_and_final.cpp" />
   </ItemGroup>
 </Project>
