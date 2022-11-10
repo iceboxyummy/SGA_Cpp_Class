@@ -6,6 +6,6 @@
     <ClInclude Include="02_teacher.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="08_overriding_and_final.cpp" />
+    <ClCompile Include="14_virtual_destrutor.cpp" />
   </ItemGroup>
 </Project>

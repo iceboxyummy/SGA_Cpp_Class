@@ -18,9 +18,12 @@
 #include<iostream>
 using namespace std;
 
+// class A final  // final : 클래스 상속을 제한하는 키워드
+				  // 메서드에 붙이면 해당 메서드 오버라이딩을 제한한다.
 class A
 {
 public:
+	// 가상함수
 	virtual void Print(int x) { cout << "A" << endl; }
 };
 
@@ -30,13 +33,24 @@ public:
 
 	// 반환형과 매개변수가 같아야한다. => 매개변수가 다를 경우 오버로딩이다.
 	// void Print(short x) { cout << "B" << endl; }
-	void Print(int x) { cout << "B" << endl; }
+
+	// 오버라이딩은 상속받은 메서드를 가상 함수 테이블을 통해 하나만 골라 쓰는 것
+	void Print(int x) override { cout << "B" << endl; }
+
+	/*
+		override : 오버라이딩이 가능한 함수인지 판단해준다.-> 불가능하다면 error
+		 - 파생 클래스에서 재정의한 함수에 붙인다.
+		 - 오버라이딩 함수를 명시적으로 표시한다. -> 코드 가독성이 좋아진다.
+	*/
+
+	// 메서드에 final키워드를 추가할 경우 자식 클래스에서 오버라이딩이 제한된다.
+	// void Print(int x) override final { cout << "B" << endl; }
 };
 
 class C :public B
 {
 public:
-	void Print(int x) { cout << "C" << endl; }
+	void Print(int x) override { cout << "C" << endl; }
 };
 
 int main() {
