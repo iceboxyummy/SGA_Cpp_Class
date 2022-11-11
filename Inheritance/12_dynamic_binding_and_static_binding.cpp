@@ -1,17 +1,17 @@
  // 12_dynamic_binding_and_static_binding.cpp
 
 /*
-	Binding(¹ÙÀÎµù)
-	 : ÇÁ·Î±×·¥ ¼Ò½º¿¡ ¾²ÀÎ °¢Á¾ ³»ºÎ¿ä¼Ò, ÀÌ¸§ ½Äº°ÀÚµé¿¡ ´ëÇÑ °ª ¶Ç´Â ¼Ó¼ºÀ» È®Á¤ÇØ ÁÖ´Â °úÁ¤
-	  - ÇÔ¼ö°¡ È£ÃâµÉ ¶§ ÇÔ¼öÀÇ ÁÖ¼Ò¸¦ ¿¬°áÇØ ÁÖ´Â °Í
+	Binding(ë°”ì¸ë”©)
+	 : í”„ë¡œê·¸ëž¨ ì†ŒìŠ¤ì— ì“°ì¸ ê°ì¢… ë‚´ë¶€ìš”ì†Œ, ì´ë¦„ ì‹ë³„ìžë“¤ì— ëŒ€í•œ ê°’ ë˜ëŠ” ì†ì„±ì„ í™•ì •í•´ ì£¼ëŠ” ê³¼ì •
+	  - í•¨ìˆ˜ê°€ í˜¸ì¶œë  ë•Œ í•¨ìˆ˜ì˜ ì£¼ì†Œë¥¼ ì—°ê²°í•´ ì£¼ëŠ” ê²ƒ
 
-	static binding(Early binding) - Á¤Àû ¹ÙÀÎµù
-	  - ÄÄÆÄÀÏ Å¸ÀÓ ¶§ ÀÌ¹Ì °áÁ¤µÇ¾î ÀÖÀ½
-	  - ¼Óµµ°¡ ºü¸£³ª À¯¿¬ÇÏÁö ¾ÊÀ½
+	static binding(Early binding) - ì •ì  ë°”ì¸ë”©
+	  - ì»´íŒŒì¼ íƒ€ìž„ ë•Œ ì´ë¯¸ ê²°ì •ë˜ì–´ ìžˆìŒ
+	  - ì†ë„ê°€ ë¹ ë¥´ë‚˜ ìœ ì—°í•˜ì§€ ì•ŠìŒ
 
-	Dynamic Binding(Late Binding) - µ¿Àû ¹ÙÀÎµù
-	  - ·±Å¸ÀÓ¶§ °áÁ¤ÀÌ ³²
-	  - ´À¸®Áö¸¸ À¯¿¬ÇÔ
+	Dynamic Binding(Late Binding) - ë™ì  ë°”ì¸ë”©
+	  - ëŸ°íƒ€ìž„ë•Œ ê²°ì •ì´ ë‚¨
+	  - ëŠë¦¬ì§€ë§Œ ìœ ì—°í•¨
 */
 
 #include <iostream>
@@ -29,7 +29,7 @@ int main(){
 	cout << "0 : add, 1 : sub, 2 : mul" << endl;
 	cin >> op;
 
-	// Á¤Àû¹ÙÀÎµù
+	// ì •ì ë°”ì¸ë”©
 	int result;
 	
 	switch (op)
@@ -41,7 +41,7 @@ int main(){
 
 	cout << result << endl;
 
-	// µ¿Àû ¹ÙÀÎµù
+	// ë™ì  ë°”ì¸ë”©
 	int(*func_ptr)(int, int) = nullptr;
 
 	switch (op)
@@ -54,4 +54,4 @@ int main(){
 	cout << func_ptr(x, y) << endl;
 
 	return 0;
-}
+} 
