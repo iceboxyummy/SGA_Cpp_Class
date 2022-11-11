@@ -1,9 +1,9 @@
  // 09_covariant.cpp
 
 /*
-	covariant ( °øº¯¹ÝÈ¯Çü ) : ÀÚ½ÅÀÇ ÂüÁ¶¸¦ ¹ÝÈ¯ÇÏ´Â °æ¿ì »ó¼Ó°ü°è¿¡¼­ °°Àº ÇüÅÂÀÇ ÇÔ¼ö·Î ÀÎÁ¤µÇ´Â °Í
-	 - is-a °ü°èÀÌ±â ¶§¹®¿¡ ÀÚ½ÅÀÇ ÂüÁ¶¸¦ ¸®ÅÏÇÒ ¶§ °°Àº°ÍÀ¸·Î ÀÎ½Ä
-	 - ¹ÝÈ¯°ªÀÌ ´Þ¶óµµ °¡´ÉÇÑ ¿À¹ö¶óÀÌµù ¹æ¹ý
+	covariant ( ê³µë³€ë°˜í™˜í˜• ) : ìžì‹ ì˜ ì°¸ì¡°ë¥¼ ë°˜í™˜í•˜ëŠ” ê²½ìš° ìƒì†ê´€ê³„ì—ì„œ ê°™ì€ í˜•íƒœì˜ í•¨ìˆ˜ë¡œ ì¸ì •ë˜ëŠ” ê²ƒ
+	 - is-a ê´€ê³„ì´ê¸° ë•Œë¬¸ì— ìžì‹ ì˜ ì°¸ì¡°ë¥¼ ë¦¬í„´í•  ë•Œ ê°™ì€ê²ƒìœ¼ë¡œ ì¸ì‹
+	 - ë°˜í™˜ê°’ì´ ë‹¬ë¼ë„ ê°€ëŠ¥í•œ ì˜¤ë²„ë¼ì´ë”© ë°©ë²•
 */
 
 #include <iostream>
@@ -18,11 +18,11 @@ public:
 class B : public A
 {
 public:
-	// °øº¯¹ÝÈ¯Çü : ÀÚ½ÅÀÇ ÂüÁ¶¸¦ ¸®ÅÏÇÒ °æ¿ì »ó¼Ó°ü°è¿¡¼­ °°Àº ÇüÅÂ·Î ÀÎ½ÄµÈ´Ù.
-	// override Å°¿öµå¸¦ ³Ö¾î¼­ Á¦´ë·Î ¿À¹ö¶óÀÌµùµÈ °ÍÀ» È®ÀÎ °¡´É
+	// ê³µë³€ë°˜í™˜í˜• : ìžì‹ ì˜ ì°¸ì¡°ë¥¼ ë¦¬í„´í•  ê²½ìš° ìƒì†ê´€ê³„ì—ì„œ ê°™ì€ í˜•íƒœë¡œ ì¸ì‹ëœë‹¤.
+	// override í‚¤ì›Œë“œë¥¼ ë„£ì–´ì„œ ì œëŒ€ë¡œ ì˜¤ë²„ë¼ì´ë”©ëœ ê²ƒì„ í™•ì¸ ê°€ëŠ¥
 	B* GetThisPointer() override { cout << "B" << endl; return this; }
 };
 
 int main() {
 	return 0;
-}
+} 
