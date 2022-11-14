@@ -18,19 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="02_person.h" />
-    <ClInclude Include="02_student.h" />
-    <ClInclude Include="02_teacher.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="18_dynamic_casting.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a84910f0-c490-45a3-ac6d-ff28838699e6}</ProjectGuid>
-    <RootNamespace>Inheritance</RootNamespace>
+    <ProjectGuid>{62512d26-f395-482c-9699-63670081e6da}</ProjectGuid>
+    <RootNamespace>Template</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,6 +138,15 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="01_function_template.cpp" />
+    <ClCompile Include="02_class_template.cpp" />
+    <ClCompile Include="02_my_arrary.cpp" />
+    <ClCompile Include="03_template_and_non_type_parameter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="02_my_arrary.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
