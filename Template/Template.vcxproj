@@ -139,10 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_function_template.cpp" />
-    <ClCompile Include="02_class_template.cpp" />
+    <ClInclude Include="02_my_arrary.inl">
+      <FileType>Document</FileType>
+    </ClInclude>
     <ClCompile Include="02_my_arrary.cpp" />
-    <ClCompile Include="03_template_and_non_type_parameter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="02_my_arrary.h" />
