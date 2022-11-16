@@ -25,10 +25,10 @@ private :
 };
 
 /*
-	1. .h¿¡ Àû±â
+	1. .hÂ¿Â¡ Ã€Ã»Â±Ã¢
 
 	template<typename T>
 	inline void MyArray<T>::Print()
 	{
 	}
-*/
+*/ 
