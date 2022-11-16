@@ -1,6 +1,13 @@
 #pragma once
 
- // 02_my_arrary.h
+ // 02_my_array.h
+
+/*
+	3. 구현부를 가지고 있는 파일을 만들어서.h에 추가
+
+	#inclide "my_array.inl"
+*/
+
 template<typename T>
 
 class MyArray
@@ -25,7 +32,7 @@ private :
 };
 
 /*
-	1. .h¿¡ Àû±â
+	1. .h에 적는다.
 
 	template<typename T>
 	inline void MyArray<T>::Print()

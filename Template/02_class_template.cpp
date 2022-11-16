@@ -5,8 +5,8 @@
  // 02_class_template.cpp
 
 #include <iostream>
-#include "02_my_arrary.h"
-// #include "02_my_arrary.cpp" : 2. 분리한 .cpp까지추가 -> .h와 .ccp로 분리한 이유가 사라진다.
+#include "02_my_array.h"
+// #include "02_my_array.cpp" : 2. 분리한 .cpp까지추가 -> .h와 .ccp로 분리한 이유가 사라진다.
 using namespace std;
 
 int main() {
@@ -32,5 +32,5 @@ int main() {
 	 1. 템플릿 코드를 .h에 적는다.
 	 2. 구현부를 분리했다면 .cpp까지 포함시켜준다.
 	 2. 템플릿 함수의 구현부를 가지고 있는 파일을 만들어서 .h에 추가해준다.
-	 4. TODO 4,5 수업후 설명
+	 4. 사용할 자료형에 대해서 명시적 특수화
 */
