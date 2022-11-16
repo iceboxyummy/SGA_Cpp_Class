@@ -1,8 +1,8 @@
  // 04_function_template_specialization.cpp
 
 /*
-	function template specialization (ÇÔ¼ö ÅÛÇÃ¸´ Æ¯¼öÈ­) : Æ¯Á¤ ÀÚ·áÇü¿¡ ´ëÇØ¼­ ´Ù¸¥ ±â´ÉÀ» ±¸ÇöÇÏ°í ½ÍÀ» ¶§ »ç¿ëÇÑ´Ù.
-	 - Æ¯Á¤ ÀÚ·áÇü¿¡ ´ëÇÏ¿© ¿¹È¸ Ã³¸®°¡ °¡´ÉÇÏ´Ù.
+	function template specialization (í•¨ìˆ˜ í…œí”Œë¦¿ íŠ¹ìˆ˜í™”) : íŠ¹ì • ìë£Œí˜•ì— ëŒ€í•´ì„œ ë‹¤ë¥¸ ê¸°ëŠ¥ì„ êµ¬í˜„í•˜ê³  ì‹¶ì„ ë•Œ ì‚¬ìš©í•œë‹¤.
+	 - íŠ¹ì • ìë£Œí˜•ì— ëŒ€í•˜ì—¬ ì˜ˆíšŒ ì²˜ë¦¬ê°€ ê°€ëŠ¥í•˜ë‹¤.
 */
  
 #include<iostream>
@@ -15,7 +15,7 @@ T GetMax(T x, T y)
 }
 
 // template specialization
-// Æ¯¼öÈ­ÇÑ Å¸ÀÔ¿¡ ÇÑÇØ ´Ù¸¥ µ¿ÀÛÀ» ¼öÇàÇÑ´Ù.
+// íŠ¹ìˆ˜í™”í•œ íƒ€ì…ì— í•œí•´ ë‹¤ë¥¸ ë™ì‘ì„ ìˆ˜í–‰í•œë‹¤.
 template<>
 char GetMax(char x, char y)
 {
@@ -44,7 +44,7 @@ private:
 
 template<>
 void Storage<double>::Print()
-{
+{ 
 	cout << scientific << value << endl;
 }
 
