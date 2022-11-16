@@ -6,4 +6,4 @@
 template<typename T>
 inline void MyArray<T>::Print()
 {
-}
+} 
