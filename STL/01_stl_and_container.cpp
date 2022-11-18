@@ -32,7 +32,7 @@ void Sequence_Container();
 void Associative_Container();
 void Container_Adapter();
 
-int main() {
+int main() { 
 	Sequence_Container();
 	Associative_Container();
 	Container_Adapter();
@@ -232,4 +232,68 @@ void Container_Adapter()
 		 - 반복자를 지원하지 않아 stl 알고리즘 사용이 안된다.
 	*/
 
+	/*
+		Stack : 선형으로 데이터를 저장하고 후입선출(LIFO)
+
+		Last In First Out : 가장 마지막에 저장된 데이터가 가장 먼저 나온다.
+	*/
+
+	// Stack
+	{
+		cout << "Stack" << endl;
+
+		stack<int>stack;
+
+		stack.push(1);
+		stack.push(2); // 복사해서 추가
+		stack.emplace(3); // 새롭게 생성하여 데이터를 추가
+
+		cout << stack.top() << endl; // 죄상단에 있는 데이터에 접근한다.
+		stack.pop(); // 최상단에 있는 데이터를 제거한다
+		cout << stack.top() << endl;
+		cout << stack.top() << endl;
+	}
+
+	/*
+		 Queue : 선형으로 데이터를 저장하고 선입선출(FIFO)을 따른다.
+
+		 First In First Out : 가장 먼저 저장된 데이터가 가장 먼저 나온다.
+	*/
+
+	// Queue
+	{
+		cout << "Queue" << endl;
+
+		queue<int> queue;
+		queue.push(1);
+		queue.push(1);
+		queue.push(1);
+
+		// 1 2 3
+		cout << queue.front() << ' ' << queue.back() << endl;
+		queue.pop();
+
+		// 2 3 
+		cout << queue.front() << ' ' << queue.back() << endl;
+	}
+
+	/*
+		Priority Queue (우선순위 큐) : 우선순위에 따라 데이터를 정렬해준다.
+		 - 큐와는 다르게 가장 우선 순위가 높은 원소가 제일 먼저 나오게 된다.
+	*/
+	{
+		cout << "Priotiry queue" << endl;
+
+		//priority_queue<int> priority_queue;
+		priority_queue<int, vector<int>, greater<int>> priority_queue;
+
+		for (const int n : {1, 8, 5, 6, 3, 4, 0, 9, 7, 2})
+			priority_queue.push(n);
+
+		for (int i = 0; i < 10; i++)
+		{
+			cout << priority_queue.top() << endl;
+			priority_queue.pop();
+		}
+	}
 }
