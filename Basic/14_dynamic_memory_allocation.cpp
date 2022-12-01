@@ -9,7 +9,7 @@ int main() {
 	int* ptr2 = new int(7); // 초기값 세팅가능
 	delete ptr2;
 
-	int* ptr3 = new int(7); // 유니폼 초기화도 가능하다.
+	int* ptr3 = new int{ 7 }; // 유니폼 초기화도 가능하다.
 	delete ptr3;
 
 	// new는 할당 실패시 nullptr을 리턴하지 않고 예외를 발생시킨다.
