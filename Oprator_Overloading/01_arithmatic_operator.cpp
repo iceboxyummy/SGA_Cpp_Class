@@ -18,6 +18,7 @@ public:
 	{
 
 	}
+
 	int GetValue() const
 	{
 		return value;
@@ -41,7 +42,7 @@ int operator+(const Won& lhs, Won& rhs)
 
 Won operator-(const Won& lhs, Won& rhs)
 {
-	// 리턴값에 맞은 적절한 생성자강 있을시 가능하다.
+	// 리턴값에 맞은 적절한 생성자가 있을시 가능하다.
 	return lhs.GetValue() - rhs.GetValue();
 }
 
