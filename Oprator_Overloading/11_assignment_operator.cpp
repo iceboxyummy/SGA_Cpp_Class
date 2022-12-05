@@ -1,8 +1,6 @@
  // 11_assignment_operator.cpp
 
-/*
-	deep copy( 깊은 복사 ) vs shallow copy( 얉은 복사 )
-*/
+/*	deep copy( 깊은 복사 ) vs shallow copy( 얉은 복사 )	*/
 
 #include <iostream>
 using namespace std;
@@ -31,6 +29,7 @@ public:
 			 - 문제 : 포인터가 복사될 경우 주소를 공유하게 된다.
 			 - 원본의 데이터 주소와 같아져 소멸할 때 문제가 생길 수 있다.
 		*/
+
 		//length = other.length;
 		//data = other.data;
 
@@ -138,7 +137,7 @@ int main() {
 
 	cout << "2###############" << endl;
 
-	{ //copy
+	{ // copy
 		MyString copy(str); // copy constructor
 		copy = str; // copy assignement operator
 		cout << (int*)copy.data << endl;

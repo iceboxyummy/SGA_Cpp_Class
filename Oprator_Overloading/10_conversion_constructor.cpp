@@ -59,9 +59,9 @@ int main() {
 
 	//Fraction frac1(10, 20); // constructor
 	//Fraction frac2(frac1);  // copys constructor 
-	//
+	
 	//Fraction frac3(1);		// 변화 생성자 호출
-	//Fraction frac4('a');	// 자료형이 다를경우 암시적 형변환
+	//Fraction frac4('a');		// 자료형이 다를경우 암시적 형변환
 	//Fraction frac5(3.14f);	// 자료형이 잘리는 형변환
 
 	//PrintFraction(frac1);

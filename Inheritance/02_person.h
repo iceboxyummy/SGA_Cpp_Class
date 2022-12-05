@@ -1,4 +1,4 @@
-#pragma once
+#pragma once 
 // 02_person.h
 // 02_student.h
 // 02_teacher.h
