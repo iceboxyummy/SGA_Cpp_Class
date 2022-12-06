@@ -53,7 +53,6 @@ public:
     {
         cout << "Scanner" << scanner << endl;
     }
-
 };
 
 class Printer : virtual public PowerDevice // 가상상속
@@ -62,7 +61,7 @@ public:
     Printer(int printer, int power)
         : PowerDevice(power)
     {
-        cout << "Scanner" << printer << endl;
+        cout << "Printer" << printer << endl;
     }
 };
 
@@ -74,9 +73,9 @@ public:
         , Printer(printer, power2)
         // 가상상속시 다이아몬드 상속을 받는 최하위 패생클래스는 따로 생성자를 지정해주어야한다.
         , PowerDevice(power3)
-    {
-    }
+    {   }
 };
+
 int main() {
     Copier copier(1, 2, 3, 4, 5);
 

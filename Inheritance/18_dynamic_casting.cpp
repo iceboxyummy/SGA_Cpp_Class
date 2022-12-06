@@ -32,7 +32,7 @@ class Derived2 : public Base
 {
 	/*
 		Base::i;
-		Derived1::k;
+		Derived2::k;
 
 		i i i i k k k k
 	*/
@@ -70,6 +70,7 @@ void DoSomething(Base* b)
 		cout << "error" << endl;
 		return;
 	}
+
 	base_to_d2->k = 888;
 }
 
