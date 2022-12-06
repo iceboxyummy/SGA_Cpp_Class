@@ -14,7 +14,7 @@ public:
 	T arr2[SIZE]; // 템플릿 구체화 시점(컴파일 타임)에 값이 들어가기 때문에 가능하다.
 };
 
-int maun() {
+int main() {
 	MyArray<int, 15> arr1;
 	MyArray<float, 20> arr2;
 	
