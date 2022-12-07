@@ -26,4 +26,3 @@ template<>
 void MyArray<float>::Print()
 {
 }
-

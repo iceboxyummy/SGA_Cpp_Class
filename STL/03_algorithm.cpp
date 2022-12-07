@@ -38,7 +38,7 @@ int main() {
 	iter = find(container.begin(), container.end(), 7);
 
 	// 퀵정렬
-	// sort(container.begin(), container.end()); list는 내부적으로 sort함수를 가지고 있어서 지원ㅌ
+	// sort(container.begin(), container.end()); list는 내부적으로 sort함수를 가지고 있어서 지원x
 	container.sort(); // list의 sort
 
 	for (auto iter = container.begin(); iter != container.end(); iter++)

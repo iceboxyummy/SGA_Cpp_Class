@@ -86,7 +86,7 @@ public:
 		cout << endl;
 	}
 };
-#endif
+#endif // 클래스멤버함수_부분특수화
 
 int main() {
 	StaticArray<int, 4> int4;

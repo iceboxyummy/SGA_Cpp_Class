@@ -57,6 +57,7 @@ void Sequence_Container()
 		   - 삽입, 삭제가 별로 없을 때
 		   - 연속적인 데이터 처리가 필요할 때 
 	*/
+
 	{
 		vector<int> vec; // template이며 template 클래스로 만들어진 객체(배열처럼 연속적인 메모리를 가지고 있음)
 
@@ -79,6 +80,7 @@ void Sequence_Container()
 		    - 멘 앞과 맨 뒤의 원소를 삽입, 삭제하는 경우가 많은 경우
 			- 벡터처럼 사용하고 싶지만 크기가 예측이 안되는 경우
 	*/
+
 	{
 		deque<int> deq;
 
@@ -113,6 +115,7 @@ void Sequence_Container()
 		     - 원소의 삽입, 삭제가 빈번하게 이루어질때
 			 - 원소들을 순차적으로만 접근할떄
 	*/
+
 	{
 		list<int> list;
 
@@ -248,7 +251,7 @@ void Container_Adapter()
 		stack.push(2); // 복사해서 추가
 		stack.emplace(3); // 새롭게 생성하여 데이터를 추가
 
-		cout << stack.top() << endl; // 죄상단에 있는 데이터에 접근한다.
+		cout << stack.top() << endl; // 최상단에 있는 데이터에 접근한다.
 		stack.pop(); // 최상단에 있는 데이터를 제거한다
 		cout << stack.top() << endl;
 		cout << stack.top() << endl;
