@@ -19,16 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Math.h" />
-    <ClInclude Include="섯다.h" />
+    <ClInclude Include="02_02_resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="const.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Math.cpp" />
-    <ClCompile Include="test1.cpp" />
-    <ClCompile Include="test2.cpp" />
-    <ClCompile Include="섯다.cpp" />
+    <ClCompile Include="02_01_unique_ptr.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
