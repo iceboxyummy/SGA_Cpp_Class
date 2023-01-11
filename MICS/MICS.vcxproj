@@ -19,10 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="02_02_resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="02_01_unique_ptr.cpp" />
+    <ClCompile Include="smart_pointer\04_weak_ptr.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

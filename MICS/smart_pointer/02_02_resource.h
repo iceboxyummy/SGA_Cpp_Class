@@ -1,3 +1,5 @@
+// 02_02_resource.h
+
 #pragma once
 #include <iostream>
 

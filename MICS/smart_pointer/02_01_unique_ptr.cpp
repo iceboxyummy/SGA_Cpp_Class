@@ -1,3 +1,5 @@
+// 02_01_unique_ptr.cpp
+
 /*
 	unique_ptr
 	 - 특정 개체를 하나의 스마트 포인터만 소유권을 가지게 하는 스마트 포인터
@@ -39,7 +41,22 @@ int main()
 
 		// res2 로 넘기는 순간 res1이 가지고 있던 메모리에 대한 소유권이 해제(nullptr로 바뀜)되기 때문에
 		// 그 후에 접근을 시도하면 에러가 발생
-		res1->Print(); //error
+		//res1->Print(); // error
+	}
+
+	// dull 포인터와 스마트 포인터를 같이 사용하면 발생할 수 있는 문제점
+	{
+		Resource* res = new Resource(5);
+
+		// res가 소유한 주소를 넘긴다. res는 스마트 포인터가 아니기 때문에 소유권 상실 x
+		// -> unique_ptr은 한 객제에 대하여 하나의 포인터만 존재해야하는 규칙이 깨짐
+		std::unique_ptr<Resource> res1(res);
+
+		// res1과 res2가 같은 주소를 소유하게된다.
+		std::unique_ptr<Resource> res2(res);
+
+		// 해당 지역을 벗어날 때 res1, res2가 소유한 메모리 해제
+		// 같은 주소를 두번 해제하려고 시도 -> 허상 포인터 문제 발생
 	}
 
 	return 0;

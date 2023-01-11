@@ -1,5 +1,6 @@
-#pragma once
+// 01_02_resource.h
 
+#pragma once
 #include <iostream>
 
 class Resource final
